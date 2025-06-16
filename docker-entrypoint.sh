@@ -25,6 +25,7 @@ input files from the host to the conatiner:
         [...] \\
         maptic/matsim:latest
 
+Make sure the input directory has a file named config.xml
 Exiting."
     printf '%s\n' "$help_text_input"
 }

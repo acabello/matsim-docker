@@ -70,4 +70,11 @@ _print_header
 _check_input_directory
 _check_output_directory
 printf '%s\n' ""
-exec "$@"
+
+if [ "$1" = "java" ]; then
+    : "${JAVA_HEAP:=-Xms512m -Xmx2g}"
+    shift
+    exec java $JAVA_HEAP "$@"
+else
+    exec "$@"
+fi

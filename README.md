@@ -7,7 +7,7 @@ A docker image of the MATSim open-source framework:
 
 * Container calls the main method of the `DockerEntrypoint` class when started.
 * Provide input files with `config.xml` and save output files from the container using volumes.
-* Make sure the config.xml` is configured to output the information to  `/opt/matsim/data/output/`
+* Make sure the `config.xml` is configured to output the information to  `/opt/matsim/data/output/`
 
 ```<param name="outputDirectory" value="/opt/matsim/data/output/" />```
   

@@ -7,6 +7,10 @@ A docker image of the MATSim open-source framework:
 
 * Container calls the main method of the `DockerEntrypoint` class when started.
 * Provide input files with `config.xml` and save output files from the container using volumes.
+* Make sure the config.xml` is configured to output the information to  `/opt/matsim/data/output/`
+
+```<param name="outputDirectory" value="/opt/matsim/data/output/" />```
+  
 * Pass additional arguments to MATSim using commands that are following the run statement.
 
 ## Getting started
@@ -22,6 +26,7 @@ docker run \
 
 To pull the recent version of the image, refer to the `latest` tag.
 
+Make sure 
 ## Local build and development
 
 Set the input and output path in the `docker-compose.yml` file, then run:
